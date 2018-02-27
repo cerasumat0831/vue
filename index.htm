@@ -2,8 +2,21 @@
 
 <body>
     <div id="app">
-        <input type="text" v-on:input="changeTitle">
-        <p>{{ title }}</p>
+        <input type="text" @input="changeTitle">
+        <p v-once v-text="title"></p>
+        <p>{{sayHello()}}</p>
+        <p v-text="sayHelloThis()"></p>
+        <p>
+            <a :href="link">bing</a>
+        </p>
+        <p v-html="finishedlink"></p>
+        <div @mousemove="updateCoordinate">
+            <button @click="increase($event,2)">click me</button>
+            <p v-text="counter"></p>
+            <p>Coordinates:{{x}}/{{y}}</p>
+            <p @mousemove="dummy"> - first dead zone</p>
+            <p @mousemove.stop=""> - second dead zone</p>
+        </div>
     </div>
 </body>
 
