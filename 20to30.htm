@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <title>20to30</title>
+    <link href="./css/demo.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" v-model="name">
+        <p v-text="name"></p>
+        <hr>
+        <button @click="counter++">increase</button>
+        <button @click="counter--">decrease</button>
+        <button @click='secondcounter++'>secondcounterplus</button>
+        <p>counter - {{counter}} | {{secondcounter}}</p>
+        <p>result - {{result()}} | {{output}}</p>
+        <hr>
+        <input type="text" v-model="color"><br>
+        <div class="demo" @click="attachRed=!attachRed" :class="divClasses"></div>
+        <div class="demo" :class="color"></div>
+        <div class="demo" :class="[color,{bigger:!attachRed}]"></div>
+    </div>
+</body>
+
+<script src="./vue.js"></script>
+<script src="./build/build20to30.js"></script>
+
+</html>

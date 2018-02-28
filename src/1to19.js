@@ -27,6 +27,10 @@ new Vue({
         },
         dummy: function(event) {
             event.stopPropagation()
+        },
+        alertMe: function(event) {
+            let str = event.target.value
+            alert(str)
         }
     }
 })
