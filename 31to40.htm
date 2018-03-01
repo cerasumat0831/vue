@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <title>31to40</title>
+</head>
+
+<body>
+    <div id="app">
+        <p v-if="show">you can see me!</p>
+        <p v-else>now you see me!</p>
+        <p v-show="show?show:!show">do you also see me?</p>
+        <button @click="show=!show">switch</button>
+        <hr>
+        <button @click="ingredients.push('spices')">add spices</button>
+        <button @click="ingredients.pop()">remove spices</button>
+        <ul>
+            <li v-for="(ingredient,index) in ingredients">
+                {{index}} - {{ingredient}}
+            </li>
+        </ul>
+        <hr>
+        <ul>
+            <li v-for="(person,key) in persons" :key="key">
+                <div v-for="(value,key1,index) in person" :key="key1">
+                    {{index}} - {{key}} - {{value}}
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+
+<script src="./vue.js"></script>
+<script src="./build/build31to40.js"></script>
+
+</html>

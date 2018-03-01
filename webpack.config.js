@@ -1,8 +1,8 @@
 module.exports = {
-    entry: './src/31to.js',
+    entry: './src/project_1.js',
     output: {
         path: __dirname,
-        filename: './build/build31to.js'
+        filename: './build/buildproject_1.js'
     },
     module: {
         rules: [{
